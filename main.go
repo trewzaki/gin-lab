@@ -2,9 +2,11 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/trewzaki/gin-lab/models"
 )
 
 func main() {
+	models.InitialDatabase()
 
 	r := gin.Default()
 
@@ -20,5 +22,5 @@ func main() {
 		})
 	})
 
-	r.Run(":9999")
+	r.Run(":8080")
 }
